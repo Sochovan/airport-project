@@ -5,8 +5,6 @@ import "./infoButtons.scss";
 const InfoButtons = () => {
   return (
     <div className="info-results">
-      {/* <div className="tabs"> */}
-      {/* <div> */}
       <ul className="nav">
         <li className="nav-item active">
           <i className="fas fa-plane-departure"></i>
@@ -17,8 +15,7 @@ const InfoButtons = () => {
           Arrivals
         </li>
       </ul>
-      {/* </div> */}
-      {/* </div> */}
+
       <FlightsSchedule />
     </div>
   );

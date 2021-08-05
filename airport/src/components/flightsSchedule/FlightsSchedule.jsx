@@ -20,7 +20,7 @@ const FlightsSchedule = () => {
         <tbody>
           <tr>
             <td className="terminal-field">
-              <span>A</span>
+              <span className="text-style">A</span>
             </td>
             <td className="time-field">3:30</td>
             <td className="way-field">
@@ -29,18 +29,16 @@ const FlightsSchedule = () => {
             <td className="status-field">
               <div>Landed at 3:28</div>
             </td>
-            <td className="company-name">
-              <ul>
-                <li className="one-airline">
-                  <div className="logo">
-                    <img
-                      // src="https://api.iev.aero/media/airline/files/604bbdf45b1ad855035563.png"
-                      alt="airline logo"
-                    />
-                  </div>
-                  <p>Bees Aitline</p>
-                </li>
-              </ul>
+            <td nowrap className="company-name">
+              <div className="one-airline">
+                <span className="logo">
+                  <img
+                    // src="https://api.iev.aero/media/airline/files/604bbdf45b1ad855035563.png"
+                    alt="airline logo"
+                  />
+                </span>
+                <span className="company">Bees Aitline</span>
+              </div>
             </td>
             <td className="flight-field">
               <span>7B9001</span>
@@ -53,7 +51,7 @@ const FlightsSchedule = () => {
           </tr>
           <tr>
             <td className="terminal-field">
-              <span>B</span>
+              <span className="text-style">B</span>
             </td>
             <td className="time-field">5:30</td>
             <td className="way-field">
@@ -65,13 +63,13 @@ const FlightsSchedule = () => {
             <td className="company-name">
               <ul>
                 <li className="one-airline">
-                  <div className="logo">
-                    <img
-                      // src="https://api.iev.aero/media/airline/files/604bbdf45b1ad855035563.png"
-                      alt="airline logo"
-                    />
-                  </div>
-                  <p>Bees Aitline</p>
+                  <img
+                    className="logo"
+                    src="https://api.iev.aero/media/airline/files/604bbdf45b1ad855035563.png"
+                    alt="airline logo"
+                  />
+
+                  <span className="company_name">Bees Aitline</span>
                 </li>
               </ul>
             </td>

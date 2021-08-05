@@ -7,8 +7,79 @@
 
 .table {
   width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  // border-spacing: 0;
 }
 thead {
-  height: 70px;
-  background-color: #fff;
+  height: 110px;
+  vertical-align: bottom;
+  color: #95989a;
+  font-size: 18px;
+}
+
+tbody {
+  font-size: 20px;
+}
+th {
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+tbody > tr:hover {
+  box-shadow: -1px 3px 10px 6px rgba(34, 60, 80, 0.2);
+  .details-field {
+    opacity: 1;
+  }
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(0, 102, 135, 0.1);
+}
+tr {
+  height: 100px;
+}
+td {
+  white-space: nowrap;
+}
+
+li {
+  list-style-type: none;
+}
+
+// // .one-airline {
+// //   display: flex;
+// //   align-items: center;
+// // }
+.logo {
+  width: 70px;
+}
+// .company {
+//   text-align: justify;
+//   margin-left: 10px;
+// }
+.company_name {
+  line-height: 35px;
+  vertical-align: baseline;
+}
+
+.terminal-field {
+  color: green;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 45px;
+}
+.text-style {
+  border: 1px solid green;
+  border-radius: 50%;
+  // justify-content: center;
+  // align-items: center;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  display: inline-block;
+}
+
+.details-field {
+  opacity: 0;
 }
