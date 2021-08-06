@@ -43,24 +43,20 @@ td {
   white-space: nowrap;
 }
 
-li {
+.one-airline {
   list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-// // .one-airline {
-// //   display: flex;
-// //   align-items: center;
-// // }
 .logo {
   width: 70px;
 }
-// .company {
-//   text-align: justify;
-//   margin-left: 10px;
-// }
+
 .company_name {
   line-height: 35px;
-  vertical-align: baseline;
+  margin-left: 8px;
 }
 
 .terminal-field {
@@ -72,8 +68,6 @@ li {
 .text-style {
   border: 1px solid green;
   border-radius: 50%;
-  // justify-content: center;
-  // align-items: center;
   height: 50px;
   width: 50px;
   text-align: center;

@@ -1,21 +1,34 @@
 import React from "react";
 import FlightsSchedule from "../flightsSchedule/FlightsSchedule";
 import "./infoButtons.scss";
+import { Link, useLocation } from "react-router-dom";
 
 const InfoButtons = () => {
+  const { pathname } = useLocation();
+
+  const infoDeparturesStyle =
+    pathname === "/departures" ? "nav-item active" : "";
+  const infoArrivalsStyle = pathname === "/arrivals" ? "nav-item active" : "";
+
   return (
     <div className="info-results">
       <ul className="nav">
-        <li className="nav-item active">
+        <Link
+          to="/departures"
+          className={`nav-item departures ${infoDeparturesStyle}`}
+        >
           <i className="fas fa-plane-departure"></i>
           Departures
-        </li>
-        <li className="nav-item">
+        </Link>
+
+        <Link
+          to="/arrivals"
+          className={`nav-item arrivals ${infoArrivalsStyle}`}
+        >
           <i className="fas fa-plane-arrival"></i>
           Arrivals
-        </li>
+        </Link>
       </ul>
-
       <FlightsSchedule />
     </div>
   );

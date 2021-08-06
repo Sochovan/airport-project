@@ -29,16 +29,17 @@ const FlightsSchedule = () => {
             <td className="status-field">
               <div>Landed at 3:28</div>
             </td>
-            <td nowrap className="company-name">
-              <div className="one-airline">
-                <span className="logo">
+            <td className="company-name">
+              <ul>
+                <li className="one-airline">
                   <img
-                    // src="https://api.iev.aero/media/airline/files/604bbdf45b1ad855035563.png"
+                    className="logo"
+                    src="https://api.iev.aero/media/airline/files/604bbdf45b1ad855035563.png"
                     alt="airline logo"
                   />
-                </span>
-                <span className="company">Bees Aitline</span>
-              </div>
+                  <span className="company_name">Bees Aitline</span>
+                </li>
+              </ul>
             </td>
             <td className="flight-field">
               <span>7B9001</span>
@@ -85,7 +86,6 @@ const FlightsSchedule = () => {
         </tbody>
       </table>
     </div>
-    // </div>
   );
 };
 
