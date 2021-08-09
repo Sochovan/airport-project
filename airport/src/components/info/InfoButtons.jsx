@@ -7,8 +7,8 @@ const InfoButtons = () => {
   const { pathname } = useLocation();
 
   const infoDeparturesStyle =
-    pathname === "/departures" ? "nav-item active" : "";
-  const infoArrivalsStyle = pathname === "/arrivals" ? "nav-item active" : "";
+    pathname === "/departures" ? "nav-item_active" : "";
+  const infoArrivalsStyle = pathname === "/arrivals" ? "nav-item_active" : "";
 
   return (
     <div className="info-results">

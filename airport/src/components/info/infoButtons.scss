@@ -32,12 +32,16 @@
   font-size: 24px;
   line-height: 60px;
   text-decoration: none;
-}
 
-.active {
-  z-index: 1;
-  background: #fff;
-  color: #73d2f0;
+  & :not(.nav-item):hover {
+    background-color: #1eb7ee;
+  }
+
+  &_active {
+    z-index: 1;
+    background: #fff;
+    color: #73d2f0;
+  }
 }
 
 .fas {
