@@ -10,9 +10,7 @@ const App = () => {
     <>
       <Provider store={store}>
         <BrowserRouter>
-          <Route>
-            <Search />
-          </Route>
+          <Route component={Search} />
           <Route component={InfoButtons} />
         </BrowserRouter>
       </Provider>

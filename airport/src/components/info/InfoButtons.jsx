@@ -1,7 +1,7 @@
 import React from "react";
 import FlightsSchedule from "../flightsSchedule/FlightsSchedule";
 import "./infoButtons.scss";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, Route } from "react-router-dom";
 
 const InfoButtons = () => {
   const { pathname } = useLocation();
@@ -29,7 +29,8 @@ const InfoButtons = () => {
           Arrivals
         </Link>
       </ul>
-      <FlightsSchedule />
+
+      <Route path="/:direction" component={FlightsSchedule} />
     </div>
   );
 };

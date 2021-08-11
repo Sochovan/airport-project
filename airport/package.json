@@ -36,6 +36,7 @@
     "classnames": "^2.3.1",
     "core-js": "^3.15.1",
     "moment": "^2.29.1",
+    "qs": "^6.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",

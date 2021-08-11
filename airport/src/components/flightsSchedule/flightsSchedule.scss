@@ -1,7 +1,6 @@
 .table-container {
   width: 100%;
-  display: flex;
-  justify-content: center;
+
   text-align: center;
 }
 
@@ -9,7 +8,6 @@
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
-  // border-spacing: 0;
 }
 thead {
   height: 110px;
@@ -39,41 +37,51 @@ tbody tr:nth-child(odd) {
 tr {
   height: 100px;
 }
-td {
-  white-space: nowrap;
-}
 
 .one-airline {
-  list-style-type: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  text-align: center;
+  padding-left: 25%;
 }
 
-.logo {
+.airline_logo {
   width: 70px;
 }
 
-.company_name {
+.airline_name {
   line-height: 35px;
   margin-left: 8px;
+  text-align: center;
 }
 
 .terminal-field {
-  color: green;
   font-size: 24px;
   font-weight: 700;
   line-height: 45px;
-}
-.text-style {
-  border: 1px solid green;
-  border-radius: 50%;
   height: 50px;
   width: 50px;
   text-align: center;
   display: inline-block;
+  border-radius: 80%;
+
+  &_green {
+    color: green;
+    border: 1px solid green;
+  }
+
+  &_blue {
+    color: blue;
+    border: 1px solid blue;
+  }
 }
 
 .details-field {
   opacity: 0;
+}
+
+.no-flights {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 80px;
 }

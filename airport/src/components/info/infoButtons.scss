@@ -33,7 +33,7 @@
   line-height: 60px;
   text-decoration: none;
 
-  & :not(.nav-item):hover {
+  &:not(.nav-item_active):hover {
     background-color: #1eb7ee;
   }
 
