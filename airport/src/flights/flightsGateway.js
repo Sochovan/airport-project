@@ -11,8 +11,4 @@ export const fetchFlightsList = () =>
 
     return null;
   });
-// .then((res) =>
-//   res.fiter(
-//     (el) => moment(el.timeToStand).format("DD-MM-YYYY") === currentDate
-//   )
-// );
+

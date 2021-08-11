@@ -1,9 +1,10 @@
+import moment from "moment";
 import { createSelector } from "reselect";
 
 export const flightsListSelector = (state) => state.flights.flightsList;
 
 export const filterListSelector = (state) => {
-  state.flights.flightNumber;
+  return state.flights.flightNumber;
 };
 
 export const filteredFlightsListSelector = createSelector(
@@ -11,8 +12,10 @@ export const filteredFlightsListSelector = createSelector(
   (flightsList, flightNumber) => {
     return flightNumber
       ? flightsList.filter((flight) =>
-          flight[fltNo].includes(flightNumber)
+          `${flight["carrierID.IATA"]}${flight.fltNo}`.includes(flightNumber)
         )
       : flightsList;
   }
 );
+
+

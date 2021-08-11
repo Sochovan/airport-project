@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../flightsSchedule/flightsSchedule.scss";
 import moment from "moment";
 import { useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Flight = ({ flight }) => {
   const [time, setTime] = useState({
@@ -21,8 +22,10 @@ const Flight = ({ flight }) => {
     const localTimeArr = moment(flight["timeToStand"]).format("H:mm");
     const localTime = pathname === "/departures" ? localTimeDep : localTimeArr;
 
-    const statusDep = moment(flight["timeTakeofFact"]).format("H:mm");
-    const statusArr = moment(flight["timeLandFact"]).format("H:mm");
+    const statusDep = `Departed at ${moment(flight["timeTakeofFact"]).format(
+      "H:mm"
+    )}`;
+    const statusArr = `Landed ${moment(flight["timeLandFact"]).format("H:mm")}`;
     const status = pathname === "/departures" ? statusDep : statusArr;
 
     setTime({
@@ -30,7 +33,6 @@ const Flight = ({ flight }) => {
       status,
     });
   }, []);
-
 
   return (
     <>
@@ -46,7 +48,7 @@ const Flight = ({ flight }) => {
           </span>
         </td>
         <td className="status-field">
-          <div>{`Landed at ${time.status}`}</div>
+          <div>{time.status}</div>
         </td>
         <td className="company-name">
           <div className="one-airline">
@@ -69,6 +71,10 @@ const Flight = ({ flight }) => {
       </tr>
     </>
   );
+};
+
+Flight.propTypes = {
+  flight: PropTypes.shape().isRequired,
 };
 
 export default Flight;

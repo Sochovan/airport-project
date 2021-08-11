@@ -9,6 +9,8 @@ import {
 import { useParams, useLocation } from "react-router-dom";
 import Flight from "../flight/Flight.jsx";
 import qs from "qs";
+import moment from "moment";
+import PropTypes from "prop-types";
 
 const FlightsSchedule = ({
   getFlightsList,
@@ -18,7 +20,6 @@ const FlightsSchedule = ({
   const { direction } = useParams();
   const { search } = useLocation();
   const querySearch = qs.parse(search, { ignoreQueryPrefix: true }).search;
-  console.log(querySearch);
 
   useEffect(() => {
     getFlightsList(direction);
@@ -28,7 +29,6 @@ const FlightsSchedule = ({
     getFilteredFlightsList(querySearch);
   }, [querySearch]);
 
-  console.log(flightsList);
   if (flightsList.length === 0) {
     return <h2 className="no-flights">No flights</h2>;
   }
@@ -48,9 +48,15 @@ const FlightsSchedule = ({
           </tr>
         </thead>
         <tbody>
-          {flightsList.map((flight) => (
-            <Flight flight={flight} key={flight.ID} />
-          ))}
+          {flightsList
+            .filter(
+              (flight) =>
+                moment(flight.timeToStand).format("DD-MM-YYYY") ===
+                moment(new Date()).format("DD-MM-YYYY")
+            )
+            .map((flight) => (
+              <Flight flight={flight} key={flight.ID} />
+            ))}
         </tbody>
       </table>
     </div>
@@ -66,5 +72,11 @@ const mapState = (state) => ({
   flightsNumber: filterListSelector(state),
   flightsList: filteredFlightsListSelector(state),
 });
+
+FlightsSchedule.propTypes = {
+  getFlightsList: PropTypes.func.isRequired,
+  flightsList: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  getFilteredFlightsList: PropTypes.func.isRequired,
+};
 
 export default connect(mapState, mapDispatch)(FlightsSchedule);
