@@ -22,7 +22,6 @@ const Search = () => {
     pathname === "/departures"
       ? `/departures?search=${value}`
       : `/arrivals?search=${value}`;
-
   return (
     <div className="search-container">
       <h2 className="search-container__title">SEARCH FLIGHT</h2>

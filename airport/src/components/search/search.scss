@@ -40,13 +40,11 @@
     width: 100%;
     font-size: 18px;
     border: none;
+    outline: none;
     padding-left: 70px;
     padding-right: 220px;
     border-radius: 0 90px 0 0;
 
-    // &:focus {
-    //   border: none;
-    // }
   }
 
   &__button {
