@@ -19,8 +19,8 @@ Builds the app for production to the build folder.
 - [Flexbox](https://en.wikipedia.org/wiki/CSS_Flexible_Box_Layout)
 - [Sass (Scss)](https://sass-lang.com/)
 - [BEM methodology](https://en.bem.info/methodology/)
-- [React] (https://reactjs.org/)
-- [Redux] (https://redux.js.org/)
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
 
 ### Author
 
