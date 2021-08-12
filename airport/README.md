@@ -1,7 +1,5 @@
 # airport-project
 
-A calendar that is designed to planning your time with the ability to add and delete tasks
-
 ### https://hardcore-mestorf-e1f2da.netlify.app
 
 In the project directory, you can run:
