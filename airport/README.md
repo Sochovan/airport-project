@@ -1,13 +1,17 @@
 # airport-project
 
+You can find the project by link:
+
 ### https://hardcore-mestorf-e1f2da.netlify.app
 
 In the project directory, you can run:
 
 npm start
+
 Runs the app in the development mode. If you make edits the page will reload.
 
 npm run build
+
 Builds the app for production to the build folder.
 
 ### The tech stack is:
